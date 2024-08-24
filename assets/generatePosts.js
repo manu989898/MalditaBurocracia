@@ -7,22 +7,22 @@ const posts = [
     {
         title: "Cómo pedir cita en la ITV",
         description: "Guía paso a paso para solicitar una cita en la Inspección Técnica de Vehículos...",
-        link: "post/CitaItv.html"
+        link: "post/itv.html"
     },
     {
         title: "Cómo sacar el pasaporte",
         description: "Guía paso a paso para tramitar tu pasaporte de forma rápida y sencilla...",
-        link: "post/SacarPasaporte.html"
+        link: "post/pasaport.html"
     },
     {
         title: "Cómo pagar una multa",
         description: "Guía paso a paso para abonar una multa de tráfico de forma segura...",
-        link: "post/PagarMulta.html"
+        link: "/post/multaTrafico.html"
     },
     {
         title: "Cómo registrarse en el sistema Cl@ve",
         description: "Guía paso a paso para crear tu cuenta en Cl@ve, la plataforma de identificación electrónica...",
-        link: "post/RegistroClave.html"
+        link: "/post/clave.html"
     }
 ];
 
