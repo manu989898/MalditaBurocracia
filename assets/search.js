@@ -50,7 +50,20 @@
             });
         }
     }
-
+     // Función para manejar el clic en "Me ha ayudado"
+    function handleHelpfulClick(event) {
+        if (event.target.classList.contains('helpful-button')) {
+            const postId = parseInt(event.target.getAttribute('data-post-id'));
+            const post = posts.find(p => p.id === postId);
+            if (post) {
+                post.helpfulCount++;
+                const countSpan = event.target.nextElementSibling;
+                countSpan.textContent = post.helpfulCount;
+                
+                // Aquí podrías añadir código para guardar el conteo en localStorage o enviarlo a un servidor
+            }
+        }
+    }
     // Función para inicializar la página
     function init() {
         loadAllPosts();
