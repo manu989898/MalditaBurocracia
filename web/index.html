@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maldita Burocracia</title>
+    <link rel="stylesheet" href="/web/assets/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Maldita Burocracia</h1>
+        <p>Guías simples para trámites complicados</p>
+    </header>
+    
+    <nav>
+        <a href="#inicio">Inicio</a>
+        <a href="#tutoriales">Tutoriales</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+    
+    <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Buscar tutoriales...">
+        <button onclick="searchPosts()">Buscar</button>
+    </div>
+    
+    <main>
+        <section id="tutoriales">
+            <h2>Tutoriales Recientes</h2>
+            <div id="postList">
+                <!-- Los posts se cargarán aquí dinámicamente -->
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Maldita Burocracia. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="/web/assets/search.js"></script>
+</body>
+</html>
