@@ -2,9 +2,9 @@
 const posts = [
     { title: "Cómo renovar tu DNI", url: "post/RenovarDni.html" },
     { title: "Cómo pedir cita en la ITV", url: "post/itv.html" },
-    { title: "Cómo sacar el pasaporte", url: "post/sacar-pasaporte.html" },
-    { title: "Cómo pagar una multa", url: "post/pagar-multa.html" },
-    { title: "Cómo registrarse en el sistema Cl@ve", url: "post/registro-clave.html" }
+    { title: "Cómo sacar el pasaporte", url: "post/pasaport.html" },
+    { title: "Cómo pagar una multa", url: "post/multaTrafico.html" },
+    { title: "Cómo registrarse en el sistema Cl@ve", url: "post/clave.html" }
 ];
 
 // Función para cargar todos los posts
