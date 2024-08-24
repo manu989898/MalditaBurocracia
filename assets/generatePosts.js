@@ -30,19 +30,36 @@ const posts = [
 function generatePostCards() {
     const postList = document.getElementById('postList');
 
-    posts.forEach(post => {
+    posts.forEach((post, index) => {
         const postCard = document.createElement('div');
-        postCard.className = 'post'; // Usa la clase 'post' que ya tienes en tu CSS
+        postCard.className = 'post';
 
         postCard.innerHTML = `
             <h3>${post.title}</h3>
             <p>${post.description}</p>
             <a href="${post.link}">Leer más</a>
+            <div class="like-container">
+                <button class="like-button" data-post-index="${index}">Me gusta</button>
+                <span class="like-count" id="like-count-${index}">0</span> me gusta
+            </div>
         `;
 
         postList.appendChild(postCard);
     });
+
+    // Añade el evento para manejar los clics en los botones de "Me gusta"
+    const likeButtons = document.querySelectorAll('.like-button');
+    likeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const index = this.getAttribute('data-post-index');
+            const likeCountSpan = document.getElementById(`like-count-${index}`);
+            let currentCount = parseInt(likeCountSpan.textContent, 10);
+            currentCount++;
+            likeCountSpan.textContent = currentCount;
+
+            // Aquí podrías añadir código para guardar el conteo en localStorage o enviarlo a un servidor
+        });
+    });
 }
 
-// Ejecutar la función al cargar la página
 document.addEventListener('DOMContentLoaded', generatePostCards);
