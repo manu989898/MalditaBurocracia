@@ -1,12 +1,12 @@
 // Usamos un IIFE (Immediately Invoked Function Expression) para evitar contaminar el espacio global
 (function() {
-    // Lista de posts (simulando los archivos en la carpeta post)
-    const posts = [
-        { title: "Cómo renovar tu DNI", url: "post/RenovarDni.html" },
-        { title: "Cómo pedir cita en la ITV", url: "post/itv.html" },
-        { title: "Cómo sacar el pasaporte", url: "post/pasaport.html" },
-        { title: "Cómo pagar una multa", url: "post/multaTrafico.html" },
-        { title: "Cómo registrarse en el sistema Cl@ve", url: "post/clave.html" }
+    // Lista de posts con contador de "Me ha ayudado"
+    let posts = [
+        { id: 1, title: "Cómo renovar tu DNI", url: "post/RenovarDni.html", helpfulCount: 0 },
+        { id: 2, title: "Cómo pedir cita en la ITV", url: "post/itv.html", helpfulCount: 0 },
+        { id: 3, title: "Cómo sacar el pasaporte", url: "post/pasaport.html", helpfulCount: 0 },
+        { id: 4, title: "Cómo pagar una multa", url: "post/multaTrafico.html", helpfulCount: 0 },
+        { id: 5, title: "Cómo registrarse en el sistema Cl@ve", url: "post/clave.html", helpfulCount: 0 }
     ];
 
     // Función para cargar todos los posts
