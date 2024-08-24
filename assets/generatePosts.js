@@ -47,19 +47,6 @@ function generatePostCards() {
         postList.appendChild(postCard);
     });
 
-    // Añade el evento para manejar los clics en los botones de "Me gusta"
-    const likeButtons = document.querySelectorAll('.like-button');
-    likeButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const index = this.getAttribute('data-post-index');
-            const likeCountSpan = document.getElementById(`like-count-${index}`);
-            let currentCount = parseInt(likeCountSpan.textContent, 10);
-            currentCount++;
-            likeCountSpan.textContent = currentCount;
-
-            // Aquí podrías añadir código para guardar el conteo en localStorage o enviarlo a un servidor
-        });
-    });
 }
 
 document.addEventListener('DOMContentLoaded', generatePostCards);
