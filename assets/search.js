@@ -1,4 +1,4 @@
-// Lista de posts (simulando los archivos en la carpeta post)
+// Lista de  (simulando los archivos en la carpeta post)
 const posts = [
     { title: "Cómo renovar tu DNI", url: "post/RenovarDni.html" },
     { title: "Cómo pedir cita en la ITV", url: "post/itv.html" },
@@ -49,5 +49,21 @@ function searchPosts() {
     }
 }
 
+// Función para inicializar la página
+function init() {
+    loadAllPosts();
+    
+    // Vincular la función de búsqueda al botón
+    const searchButton = document.getElementById('searchButton');
+    searchButton.addEventListener('click', searchPosts);
+    
+    // Añadir funcionalidad de búsqueda al presionar Enter en el campo de búsqueda
+    const searchInput = document.getElementById('searchInput');
+    searchInput.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            searchPosts();
+        }
+    });
+}d
 // Cargar todos los posts al iniciar la página
 window.onload = loadAllPosts;
